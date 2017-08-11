@@ -19,13 +19,12 @@
       "default_title": "zok clock",
       "default_popup": "popup.html"
  },
-"content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
 "commands":{
 	"_execute_browser_action":{
 		"suggested_key":{
 			"chromeos": "Ctrl+Shift+M",
 			"linux": "Ctrl+Shift+M",
-			"mac": "Ctrl+Shift+M",
+			"mac": "Command+Shift+M",
 			"windows": "Ctrl+Shift+M"								
 		}
 	}
