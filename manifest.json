@@ -1,0 +1,33 @@
+{
+"name": "zok clock",
+"version": "1.0.0",
+"manifest_version": 2,
+"permissions": [
+	"http://*/*"
+],
+"background": {
+	"scripts": ["background.js"]
+},
+"content_scripts": [
+    {
+      "matches": ["http://*/*","https://*/*"],
+	  "run_at": "document_end",
+      "js": ["content.js"]
+    }
+],
+"browser_action": {
+      "default_title": "zok clock",
+      "default_popup": "popup.html"
+ },
+"content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+"commands":{
+	"_execute_browser_action":{
+		"suggested_key":{
+			"chromeos": "Ctrl+Shift+M",
+			"linux": "Ctrl+Shift+M",
+			"mac": "Ctrl+Shift+M",
+			"windows": "Ctrl+Shift+M"								
+		}
+	}
+ }
+}
