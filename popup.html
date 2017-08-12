@@ -2,24 +2,57 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>momo qrcode</title>
+    <title>click</title>
+	<link rel="stylesheet" href="amazeui.min.css"/>
 	<style>
-		#time-box{width:300px;height:300px;}
+		#time-box{width:300px;height:auto;}
 	</style>
 </head>
 <script src="jquery.js"></script>
+<script src="amazeui.min.js"></script>
 <script src="popup.js">
 </script>
 <body>
 <div id="time-box">
-	<p>当前时间戳</p>
-	<input type="text" id="now_timestamp" value=""/>
-	<input type="text" id="now_datestring" value=""/>
+
+	<div class="am-panel am-panel-default" style="height:150px;">
+	  <div class="am-panel-hd">当前时间</div>
+	  <div class="am-panel-bd">
+  		<div class="am-form-group am-form-group-sm">
+  		    <div class="am-u-sm-10">
+  		      <input type="text" id="now_timestamp" class="am-form-field" placeholder="当前时间戳">
+  		    </div>
+  		</div>
+		<div class="am-form-group am-form-group-sm" style="margin-top:40px;">
+		    <div class="am-u-sm-10">
+		      <input type="text" id="now_datestring" class="am-form-field" placeholder="当前时日期">
+		    </div>
+		</div>
+	  </div>
+	</div>
 		
-	<p>当前时间</p>
-	<input type="text" id="input_time" value=""/>
-	<input type="text" id="output_time" value=""/>
-	<input type="submit" id="button_time"/>
+	<div class="am-panel am-panel-default" style="height:200px;">
+	  <div class="am-panel-hd">时间转换</div>
+	  <div class="am-panel-bd">
+		<div class="am-form-group am-form-group-sm">
+		    <div class="am-u-sm-10">
+		      <input type="text" id="input_timestamp" class="am-form-field" placeholder="输入你的时间戳">
+		    </div>
+		</div>
+		<div class="am-form-group am-form-group-sm" style="margin-top:40px;">
+		    <div class="am-u-sm-10">
+		      <input type="text" id="input_date" class="am-form-field" placeholder="输入你的日期">
+		    </div>
+		</div>
+		<div class="am-form-group am-form-group-sm" style="margin-top:80px;">
+		    <div class="am-u-sm-10">
+		      	<button type="button" id="transform" class="am-btn am-btn-primary" style="width:100%;">转换</button>
+		    </div>
+		</div>
+
+	  </div>
+	</div>
+	
 </div>
 </body>
 </html>
