@@ -16,41 +16,37 @@
 <div id="time-box">
 
 	<div class="am-panel am-panel-default" style="height:150px;">
-	  <div class="am-panel-hd">当前时间</div>
+	  <div class="am-panel-hd" style="text-align:center;">当前时间</div>
 	  <div class="am-panel-bd">
-  		<div class="am-form-group am-form-group-sm">
-  		    <div class="am-u-sm-10">
+  		<div class="am-form-group am-form-group-sm" style="width:255px;">
+  		    <div style="margin-left:15px;">
   		      <input type="text" id="now_timestamp" class="am-form-field" placeholder="当前时间戳">
   		    </div>
   		</div>
-		<div class="am-form-group am-form-group-sm" style="margin-top:40px;">
-		    <div class="am-u-sm-10">
+		<div class="am-form-group am-form-group-sm" style="margin-top:20px;width:255px;">
+		    <div style="margin-left:15px;">
 		      <input type="text" id="now_datestring" class="am-form-field" placeholder="当前时日期">
 		    </div>
 		</div>
 	  </div>
 	</div>
 		
-	<div class="am-panel am-panel-default" style="height:200px;">
-	  <div class="am-panel-hd">时间转换</div>
-	  <div class="am-panel-bd">
-		<div class="am-form-group am-form-group-sm">
-		    <div class="am-u-sm-10">
-		      <input type="text" id="input_timestamp" class="am-form-field" placeholder="输入你的时间戳">
+	<div class="am-panel am-panel-default" style="height:300px;">
+	  <div class="am-panel-hd" style="text-align:center;">时间转换</div>
+	  <form class="am-form">		
+		<div class="am-form-group" style="margin-top:20px;margin-left:30px;width:240px;">
+		      <textarea class="" rows="3" id="input_timestamp" placeholder="输入你的时间戳"></textarea>
+		</div>
+		<div class="am-form-group am-form-group-sm" style="margin-top:20px;margin-left:30px;width:240px;">
+		    <div>
+		      	<button type="button" id="transform_timestamp" class="am-btn am-btn-primary" style="width:110px;display:inline-block;">转日期</button>
+				<button type="button" id="transform_date" class="am-btn am-btn-primary" style="width:110px;display:inline-block;float:right;">转时间戳</button>
 		    </div>
 		</div>
-		<div class="am-form-group am-form-group-sm" style="margin-top:40px;">
-		    <div class="am-u-sm-10">
-		      <input type="text" id="input_date" class="am-form-field" placeholder="输入你的日期">
-		    </div>
+		<div class="am-form-group" style="margin-top:20px;margin-left:30px;width:240px;">
+		      <textarea class="" rows="3" id="input_date" placeholder="输入你的日期"></textarea>
 		</div>
-		<div class="am-form-group am-form-group-sm" style="margin-top:80px;">
-		    <div class="am-u-sm-10">
-		      	<button type="button" id="transform" class="am-btn am-btn-primary" style="width:100%;">转换</button>
-		    </div>
-		</div>
-
-	  </div>
+	  </form>
 	</div>
 	
 </div>

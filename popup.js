@@ -42,15 +42,38 @@
 	var now_datestring = timestampToDate(now_timestamp);
 	$('#now_datestring').val(now_datestring);
 	
-	$('#transform').click(function() {
-		var timestamp = $('#input_timestamp').val();
-		var timedate = $('#input_date').val();
-		if(timestamp) {
-			var date = timestampToDate(timestamp);	
-			$('#input_date').val(date);		
-		} else if(timedate){
-			var timestamp = dateToTimestamp(timedate);
-			$('#input_timestamp').val(timestamp);		
+	// 时间戳转换日期
+	$('#transform_timestamp').click(function() {
+		var timestamp_string = $('#input_timestamp').val();
+		if(timestamp_string == "") {
+			return;
 		}
+		
+		var timestamp_array = timestamp_string.split('\n');
+		
+		var date_array = new Array();
+		for(i = 0; i < timestamp_array.length; i++) {
+			var date = timestampToDate(timestamp_array[i]);		
+			date_array.push(date);
+		}
+		$('#input_date').val(date_array.join('\n'));		
 	});
+	
+	// 日期转换时间戳
+	$('#transform_date').click(function() {
+		var date_string = $('#input_date').val();
+		if(date_string == "") {
+			return;
+		}
+		
+		var date_array = date_string.split('\n');
+		
+		var timestamp_array = new Array();
+		for(i = 0; i < date_array.length; i++) {
+			var date = dateToTimestamp(date_array[i]);		
+			timestamp_array.push(date);
+		}
+		$('#input_timestamp').val(timestamp_array.join('\n'));		
+	});
+	
 })

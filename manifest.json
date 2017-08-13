@@ -1,5 +1,5 @@
 {
-"name": "zok clock",
+"name": "clock",
 "version": "1.0.0",
 "manifest_version": 2,
 "permissions": [
@@ -16,7 +16,7 @@
     }
 ],
 "browser_action": {
-      "default_title": "zok clock",
+      "default_title": "clock",
       "default_popup": "popup.html"
  },
 "commands":{
