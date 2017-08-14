@@ -1,5 +1,6 @@
-﻿$(function() {
-	
+﻿var auto_flush = true;
+$(function() {
+
 	function timestampToDate(timestamp){
 		var d = new Date(timestamp * 1000);
 		var year = d.getFullYear();
@@ -34,13 +35,43 @@
 		return timestamp / 1000;
 	}
 	
-	// 当前时间戳
-	var now_timestamp = parseInt(new Date().getTime()/1000);
-	$('#now_timestamp').val(now_timestamp);
+	function setNowTime() {
+		// 当前时间戳
+		var now_timestamp = parseInt(new Date().getTime()/1000);
+		$('#now_timestamp').text(now_timestamp);
 	
-	// 当前时间字符串
-	var now_datestring = timestampToDate(now_timestamp);
-	$('#now_datestring').val(now_datestring);
+		// 当前时间字符串
+		var now_datestring = timestampToDate(now_timestamp);
+		$('#now_datestring').text(now_datestring);	
+	}
+	
+	// 初始化设置当前时间
+	setNowTime()
+	
+	// 每秒更新当前时间
+	setInterval(function() {
+		if(!auto_flush) {
+			return;
+		}
+		setNowTime();
+	}, 1000);
+	
+	$('#toggle_time').click(function() {
+		var is_auto_flush = $(this).attr("auto_flush");
+		if(is_auto_flush == 1) {
+			$(this).attr("auto_flush", 0);
+			auto_flush = false;
+			$(this).text("开始");
+			$(this).removeClass("am-btn-secondary")
+			$(this).addClass("am-btn-danger")
+		} else {
+			$(this).attr("auto_flush", 1);			
+			auto_flush = true;
+			$(this).text("停止");
+			$(this).removeClass("am-btn-danger")
+			$(this).addClass("am-btn-secondary")
+		}
+	});
 	
 	// 时间戳转换日期
 	$('#transform_timestamp').click(function() {

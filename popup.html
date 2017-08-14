@@ -5,6 +5,7 @@
     <title>click</title>
 	<link rel="stylesheet" href="amazeui.min.css"/>
 	<style>
+		*{margin:0px;padding:0px;}
 		#time-box{width:300px;height:auto;}
 	</style>
 </head>
@@ -15,39 +16,34 @@
 <body>
 <div id="time-box">
 
-	<div class="am-panel am-panel-default" style="height:150px;">
-	  <div class="am-panel-hd" style="text-align:center;">当前时间</div>
-	  <div class="am-panel-bd">
-  		<div class="am-form-group am-form-group-sm" style="width:255px;">
-  		    <div style="margin-left:15px;">
-  		      <input type="text" id="now_timestamp" class="am-form-field" placeholder="当前时间戳">
-  		    </div>
-  		</div>
-		<div class="am-form-group am-form-group-sm" style="margin-top:20px;width:255px;">
-		    <div style="margin-left:15px;">
-		      <input type="text" id="now_datestring" class="am-form-field" placeholder="当前时日期">
-		    </div>
-		</div>
-	  </div>
+	<div class="am-alert" data-am-alert>
+	  <p style="text-align:center;">当前时间</p>
 	</div>
-		
-	<div class="am-panel am-panel-default" style="height:300px;">
-	  <div class="am-panel-hd" style="text-align:center;">时间转换</div>
-	  <form class="am-form">		
+	<div style="height:100px;">
+		<span id="now_timestamp" style="width:100%;display:inline-block;text-align:center;"></span>
+		<br/>
+		<span id="now_datestring" style="width:100%;display:inline-block;text-align:center;"></span>
+		<div>
+		<button type="button" id="toggle_time" class="am-btn am-radius am-btn-secondary" auto_flush="1" style="display:block;margin:0 auto;margin-top:10px;">暂停</button>
+		</div>
+	</div>	
+	<div class="am-alert" data-am-alert>
+	  <p style="text-align:center;">时间转换</p>
+	</div>
+	<form class="am-form">		
 		<div class="am-form-group" style="margin-top:20px;margin-left:30px;width:240px;">
 		      <textarea class="" rows="3" id="input_timestamp" placeholder="输入你的时间戳"></textarea>
 		</div>
 		<div class="am-form-group am-form-group-sm" style="margin-top:20px;margin-left:30px;width:240px;">
 		    <div>
-		      	<button type="button" id="transform_timestamp" class="am-btn am-btn-primary" style="width:110px;display:inline-block;">转日期</button>
-				<button type="button" id="transform_date" class="am-btn am-btn-primary" style="width:110px;display:inline-block;float:right;">转时间戳</button>
+		      	<button type="button" id="transform_timestamp" class="am-btn am-radius am-btn-secondary" style="width:110px;display:inline-block;">转日期</button>
+				<button type="button" id="transform_date" class="am-btn am-radius am-btn-secondary" style="width:110px;display:inline-block;float:right;">转时间戳</button>
 		    </div>
 		</div>
 		<div class="am-form-group" style="margin-top:20px;margin-left:30px;width:240px;">
 		      <textarea class="" rows="3" id="input_date" placeholder="输入你的日期"></textarea>
 		</div>
-	  </form>
-	</div>
+	</form>
 	
 </div>
 </body>
