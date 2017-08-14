@@ -4,10 +4,11 @@ chrome extension
 # install 
 open url install extension
 
-# use keyboard
+# Usage
 ```
-chromeos  Ctrl+Shift+M
-linux     Ctrl+Shift+M
-mac       Command+Shift+M
-windows   Ctrl+Shift+M						
+keyboard:
+   chromeos  Ctrl+Shift+M
+   linux     Ctrl+Shift+M
+   mac       Command+Shift+M
+   windows   Ctrl+Shift+M						
 ```
