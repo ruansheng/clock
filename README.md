@@ -2,7 +2,7 @@
 chrome extension
 
 # install 
-open url https://chrome.google.com/webstore/detail/clock/hhpgpjcnakkkfhaikjfkjhcclmeomoij?hl=zh-CN install extension
+open https://chrome.google.com/webstore/detail/clock/hhpgpjcnakkkfhaikjfkjhcclmeomoij?hl=zh-CN install extension
 
 # Usage
 ```
