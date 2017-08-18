@@ -31,7 +31,7 @@ $(function() {
 	}
 	
 	function dateToTimestamp(date) {
-		var timestamp = Date.parse(new Date(date));
+		var timestamp = Date.parse(new Date(date.replace(/-/g,  "/")));
 		return timestamp / 1000;
 	}
 	
